@@ -10,6 +10,9 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
+      - name: Purge non-essential files
+        run: |
+          find . -type f ! \( -iname "*.pdf" -o -iname "*.html" \) -delete
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
