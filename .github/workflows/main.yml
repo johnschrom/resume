@@ -9,7 +9,7 @@ jobs:
       - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex
+          root_file: *.tex
       - name: Purge non-essential files
         run: |
           find . -type f ! \( -iname "*.pdf" -o -iname "*.html" \) -delete
