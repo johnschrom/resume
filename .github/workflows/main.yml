@@ -13,9 +13,9 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
-          path:
-            - *.pdf
-            - *.html
+          path: |
+            *.pdf
+            *.html
   deploy:
     needs: build
     runs-on: ubuntu-latest
