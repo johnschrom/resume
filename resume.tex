@@ -1,0 +1,143 @@
+%-------------------------
+% Rover Resume - Star Template
+% Link: https://github.com/subidit/rover-resume
+%
+% CUSTOM COMMANDS \aux{} and \rside{} for part formatting
+% eg. \subsection{Company Name \aux{Designation} \rside{Duration}}
+% Double lined titles with \subsection{} and \subsubsection{}
+% \linkicon gives external link icon
+%-------------------------
+
+\documentclass[11pt]{article}
+
+
+\usepackage[sfdefault,semibold,lf]{FiraSans}
+\usepackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
+
+\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+
+\newcommand{\linkicon}{
+  \color{gray}{\footnotesize\raisebox{1pt}{\faIcon{external-link-alt}}}
+}
+
+\setcounter{secnumdepth}{0}
+\pdfgentounicode=1
+
+
+%====== LIST FORMATTING ======
+\usepackage{enumitem}
+\setlist[itemize]{nosep, left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em}
+\setlist[description]{itemsep=0pt}
+
+
+%====== TITLE FORMATTING ======
+\usepackage{xhfill}
+\usepackage{soul}
+\newcommand{\midrule}[1]{
+  \leavevmode
+  \xrfill[.5ex]{1pt}[lightgray]~\so{#1}~\xrfill[.5ex]{1pt}[lightgray]
+}
+
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{*4}{*1}
+\titlespacing{\subsection}{0pt}{*3}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
+\titleformat*{\subsection}{\large\bfseries\scshape}
+\titleformat*{\subsubsection}{\itshape}
+
+
+%====== CUSTOM COMMANDS ======
+\newcommand{\aux}[1]{
+  $|$ \space {\normalfont #1}%
+}
+
+\newcommand{\rside}[1]{
+  \hfill {\itshape #1}%
+}
+
+
+%====== FOOTER ======
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancyfoot[C]{\small\color{gray} Portfolio, Publications, and full CV available at johnschrom.com}
+
+
+%====== PACKAGES ======
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+
+
+%====== FINISH PREAMBLE ======
+
+%====== DOCUMENT STARTS HERE ======
+
+\begin{document}
+
+%====== BANNER ======
+
+\begin{center}
+  {
+    \mbox{
+    \fontsize{30}{12} 
+    \fontseries{heavy}\selectfont
+    \textcolor{darkgray}{JOHN SCHROM}
+    }
+  } \\ \medskip
+
+  % {\color{gray}{\faHome}} 1 infinite loop, CA \quad
+
+  \href{tel:4157583232}{{\color{gray}{\faMobile}} 415 758 3232} \quad
+  \href{mailto:john@schrom.org}{{\color{gray}{\faEnvelope}} john@schrom.org} \quad 
+  \href{https://github.com/johnschrom}{{\color{gray}{\faGithub}} johnschrom} \quad
+  \href{https://johnschrom.com/}{{\color{gray}{\faLink}} johnschrom.com} 
+\end{center}
+
+%====== BANNER END ======
+
+\section{Experience}
+%==========
+\subsection{University of California \rside{\normalfont\large\bfseries\scshape{San Francisco, CA}}}
+\subsubsection{\textit{Computational and Data Science Research Specialist 4} \rside{2021 -- present}}
+\begin{itemize}[label=-]
+  \item Designed and executed statistical analyses that led to three high-impact publications in six months, quickly amassing \textcolor{Bittersweet}{200+ citations} and \textcolor{Bittersweet}{130,000+ views}, and gaining coverage by \textcolor{Bittersweet}{50+ news outlets}, including the New York Times.
+  \item Architect and develop a data system to process and store over \textcolor{Bittersweet}{one terabyte of health data} from \textcolor{Bittersweet}{160,000+ individuals} across Kenya and Uganda in a secure, HIPAA-compliant manner.
+  \item Automate reproducible data pipelines to reduce data lag \textcolor{Bittersweet}{from 7+ days} to \textcolor{Bittersweet}{less than 6 hours}, improving real-time decision-making and quality control capabilities.
+  \item Supervise a \textcolor{Bittersweet}{team of three data specialists} and coordinate projects for a \textcolor{Bittersweet}{15+ member international data team}, implementing Agile methodologies, CI/CD pipelines, and code reviews to streamline development workflows and enhance collaboration.
+\end{itemize}
+
+\subsection{One Medical \rside{\normalfont\large\bfseries\scshape{San Francisco, CA}}}
+\subsubsection{Senior Machine Learning Engineer / Staff Data Scientist \rside{2017 -- 2021}}
+\begin{itemize}[label=-]
+  \item Engineered machine learning models for targeted health interventions, achieving a \textcolor{Bittersweet}{43\% increase in engagement} and \textcolor{Bittersweet}{22\% improvement in clinical outcomes}.
+  \item Invented a novel machine learning process in an electronic health record, leading to \textcolor{Bittersweet}{One Medical's first-ever patent application} and advancing the use of ML to address clinician burnout.
+  \item Designed, executed, and published program evaluations of clinical initiatives, which were prominently featured in \textcolor{Bittersweet}{One Medical’s S-1 filing for its IPO} demonstrating their impact on patient outcomes and operational efficiency.
+  \item Won \textcolor{Bittersweet}{"People's Choice" and "Most Geektastic" awards} at company hackathon for developing machine learning applications to address provider efficiency in clinical documentation.
+\end{itemize}
+
+\subsection{Grand Rounds, \normalfont\textit{Senior Data Scientist} \rside{2016 -- 2017}}
+\subsection{Practice Fusion, \normalfont\textit{Senior Data Scientist} \rside{2013 -- 2016}}
+\subsection{University of Minnesota, \normalfont\textit{Research Assistant} \rside{2012 -- 2013}}
+\subsection{Rock Health, \normalfont\textit{Fellow} \rside{2012}}
+\bigskip
+
+\section{Education}
+%==========
+\subsection{\normalfont Graduate Coursework in Statistics \rside{\normalfont Johns Hopkins University}}
+\subsection{\normalfont Graduate Coursework in Computer Science \rside{\normalfont University of Minnesota}}
+\subsection{MPH in Epidemiology \rside{\normalfont\large\bfseries\scshape{University of Illinois}}}
+\subsection{BS in Chemistry and Biology \rside{\normalfont\large\bfseries\scshape{University of Minnesota}}}
+\bigskip
+
+\section{Skills}
+%===============
+\noindent\small \textbf{python} pandas, sklearn, numpy, matplotlib, seaborn, plotly, nltk, spacy, statsmodels, keras, pytorch, dash, django, flask \textbf{R} ggplot, tidyverse, shiny, caret, arules, e1071, mass \textbf{Statistical Analysis} hypothesis testing, regression, study design, sampling techniques, bootstrapping, monte carlo simulations \textbf{Machine Learning} penalized regression (ridge, lasso, elasticnet), decision trees and random forests, nearest neighbors, support vector machines, neural networks and deep learning, association rules, clustering (kmeans, density-based, hierarchical), principal component analysis, naive bayes, bayesnet  \textbf{Databases} SQL, mysql, postgres, sqlite, mongodb, couchdb, snowflake, bigquery, spark \textbf{Dev Ops} docker, kubernates, CI/CD, AWS
+
+\end{document}
