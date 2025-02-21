@@ -6,10 +6,12 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
+      - name: Identify LaTeX docuemnts
+        run: echo "TEX_FILES=$(find . -name '*.tex' | tr '\n' ' ')" >> $GITHUB_ENV
       - name: Compile LaTeX documents
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: *.tex
+          root_file: ${{ env.TEX_FILES }}
       - name: Purge non-essential files
         run: |
           find . -type f ! \( -iname "*.pdf" -o -iname "*.html" \) -delete
