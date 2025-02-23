@@ -1,0 +1,263 @@
+%-------------------------
+% Rover Resume - Star Template
+% Link: https://github.com/subidit/rover-resume
+%
+% CUSTOM COMMANDS \aux{} and \rside{} for part formatting
+% eg. \subsection{Company Name \aux{Designation} \rside{Duration}}
+% Double lined titles with \subsection{} and \subsubsection{}
+% \linkicon gives external link icon
+%-------------------------
+
+\documentclass[11pt]{article}
+
+
+\usepackage[sfdefault,semibold,lf]{FiraSans}
+\usepackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
+
+\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+
+\newcommand{\linkicon}{
+  \color{gray}{\footnotesize\raisebox{1pt}{\faIcon{external-link-alt}}}
+}
+
+\setcounter{secnumdepth}{0}
+\pdfgentounicode=1
+
+
+%====== LIST FORMATTING ======
+\usepackage{enumitem}
+\setlist[itemize]{nosep, left=0pt .. 1.5em}
+\setlist[enumerate]{left=0pt..1.5em}
+\setlist[description]{itemsep=0pt}
+
+
+%====== TITLE FORMATTING ======
+\usepackage{xhfill}
+\usepackage{soul}
+\newcommand{\midrule}[1]{
+  \leavevmode
+  \xrfill[.5ex]{1pt}[lightgray]~\so{#1}~\xrfill[.5ex]{1pt}[lightgray]
+}
+
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{*4}{*1}
+\titlespacing{\subsection}{0pt}{*3}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{\midrule}
+\titleformat*{\subsection}{\large\bfseries\scshape}
+\titleformat*{\subsubsection}{\itshape}
+
+
+%====== CUSTOM COMMANDS ======
+\newcommand{\aux}[1]{
+  $|$ \space {\normalfont #1}%
+}
+
+\newcommand{\rside}[1]{
+  \hfill {\itshape #1}%
+}
+
+
+%====== FOOTER ======
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancyfoot[C]{\small\color{gray} Portfolio and publications available at johnschrom.com}
+
+
+%====== PACKAGES ======
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage[bookmarks=false,hidelinks]{hyperref}
+
+
+%====== FINISH PREAMBLE ======
+
+%====== DOCUMENT STARTS HERE ======
+
+\begin{document}
+
+%====== BANNER ======
+
+\begin{center}
+  {
+    \mbox{
+    \fontsize{30}{12}\fontseries{heavy}\selectfont\textcolor{darkgray}{JOHN SCHROM}\normalfont\selectfont\textcolor{lightgray}{, MPH FAMIA}
+    }
+  } \\ \medskip
+
+  \href{mailto:john@schrom.org}{john@schrom.org} \quad \textbullet \quad
+  \href{tel:4157583232}{415.758.3232} \quad \textbullet \quad
+  \href{https://johnschrom.com}{johnschrom.com}
+
+\end{center}
+
+%====== BANNER END ======
+
+\section{Education}
+%==========
+\subsection{MPH in Epidemiology \rside{\normalfont\large\bfseries\scshape{University of Illinois}}}
+\begin{itemize}[label=-]
+    \item Served as TA for graduate-level epidemiologic computing course
+\end{itemize}
+\subsection{BS in Chemistry and Biology \rside{\normalfont\large\bfseries\scshape{University of Minnesota}}}
+\begin{itemize}[label=-]
+    \item Led a student cultural center, served as president of residence hall, and organized chemistry outreach programs for elementary and middle school students.
+\end{itemize}
+\subsection{Graduate Coursework}
+\subsubsection{Johns Hopkins University \rside{2019 -- 2021}}
+\begin{itemize}[label=-]
+    \item Completed coursework in statistics, linear algebra, and machine learning.
+\end{itemize}
+\subsubsection{University of Minnesota \rside{2012 -- 2016}}
+\begin{itemize}[label=-]
+    \item Completed coursework in machine learning, data mining, operating systems, database theory, and bioinformatics
+\end{itemize}
+
+\section{Experience}
+%==========
+\subsection{University of California \rside{\normalfont\large\bfseries\scshape{San Francisco, CA}}}
+\subsubsection{\textit{Computational and Data Science Research Specialist 4} \rside{2021 -- present}}
+\begin{itemize}[label=-]
+  \item Designed and executed statistical analyses that led to three high-impact publications in six months, quickly amassing 200+ citations and 130,000+ views, and gaining coverage by 50+ news outlets, including the New York Times.
+  \item Architect and develop a data system to process and store over one terabyte of health data from 160,000+ individuals across Kenya and Uganda in a secure, HIPAA-compliant manner.
+  \item Automate reproducible data pipelines to reduce data lag from 7+ days to less than 6 hours, improving real-time decision-making and quality control capabilities.
+  \item Supervise a team of three data specialists and coordinate projects for a 15+ member international data team, implementing Agile methodologies, CI/CD pipelines, and code reviews to streamline development workflows and enhance collaboration.
+\end{itemize}
+
+\subsection{One Medical \rside{\normalfont\large\bfseries\scshape{San Francisco, CA}}}
+\subsubsection{Senior Machine Learning Engineer\rside{2020 -- 2021}}
+\begin{itemize}[label=-]
+  \item Engineered machine learning models for targeted health interventions, achieving a 43\% increase in engagement and 22\% improvement in clinical outcomes.
+  \item Invented a novel machine learning process in an electronic health record, leading to One Medical's first-ever patent application and advancing the use of ML to address clinician burnout.
+\end{itemize}
+\subsubsection{Staff Data Scientist\rside{2019 -- 2020}}
+\begin{itemize}[label=-]
+    \item Directed the design and development of population health infrastructure based on industry standards.
+\end{itemize}
+\subsubsection{Senior Data Scientist\rside{2017 -- 2019}}
+\begin{itemize}[label=-]
+\item Designed, executed, and published program evaluations of clinical initiatives, which were prominently featured in One Medical’s S-1 filing for its IPO demonstrating their impact on patient outcomes and operational efficiency.
+\item Created research mentorship program to encourage participation in healthcare research.
+\end{itemize}
+
+\subsection{Grand Rounds \rside{\normalfont\large\bfseries\scshape{San Francisco, CA}}}
+\subsubsection{Senior Data Scientist\rside{2016 -- 2017}}
+\begin{itemize}[label=-]
+    \item Led creation of disease-specific machine learning models predicting patient quality.
+    \item Developed framework and prototyped web app for patient-provider matching based on predicted health outcomes. 
+\end{itemize}
+
+\subsection{Practice Fusion \rside{\normalfont\large\bfseries\scshape{San Francisco, CA}}}
+\subsubsection{Senior Data Scientist\rside{2015 -- 2016}}
+\begin{itemize}[label=-]
+    \item Led development of research data warehouse.
+    \item Built API to support smart search and missing data recommendations in product.
+\end{itemize}
+\subsubsection{Data Scientist\rside{2013 -- 2015}}
+\begin{itemize}[label=-]
+    \item Developed data mining algorithm and web application for disease outbreak identification.
+    \item Collaborated with a multidisciplinary team to build an interactive data product for investigating clinical trends, focusing on data cleaning and algorithm support.
+\end{itemize}
+
+\subsection{University of Minnesota \rside{\normalfont\large\bfseries\scshape{Minneapolis, MN}}}
+\subsubsection{Research Assistant\rside{2012 -- 2013}}
+\begin{itemize}[label=-]
+    \item Developed and implemented data mining method to identify pre-diabetic phenotypes
+\end{itemize}
+
+\subsection{Hennepin County Medical Center \rside{\normalfont\large\bfseries\scshape{Minneapolis, MN}}}
+\subsubsection{Data Analyst\rside{2010 -- 2012}}
+\begin{itemize}[label=-]
+    \item Implemented population health program for largest HIV clinic in Minnesota.
+    \item Identified syphilis outbreak in HIV population and initiated clinic-wide response.
+    \item Led analysis for state-funded study to identify social predictors of utilization.
+\end{itemize}
+
+\subsection{Allina Health \rside{\normalfont\large\bfseries\scshape{Minneapolis, MN}}}
+\subsubsection{Data Analyst\rside{2009 -- 2010}}
+\begin{itemize}[label=-]
+    \item Provided epidemiological support for patient safety and quality committees.
+    \item Designed and executed clinical data analysis for clinical leadership.
+    \item Served as product manager for development of patient complaint reporting system.
+\end{itemize}
+
+\section{Publications}
+\begin{itemize}
+    \setlength{\itemsep}{1em}
+    \renewcommand{\labelitemi}{}
+    \setlength{\leftskip}{-1.5em}
+    \item Kamya MR, Balzer LB, Ayieko J, Kabami J, Kakande E, Chamie G, Sutter N, Sunday H, Litunya J, Schwab J, \textbf{Schrom J}, Bacon M, Koss C, Rinehart A, Petersen M, Havlir D. Dynamic choice HIV prevention with cabotegravir long-acting injectable in rural Uganda and Kenya: a randomised trial extension. The Lancet HIV. 2024 Nov 1;11(11):e736-45.
+    \item Kakande ER, Ayieko J, Sunday H, Biira E, Nyabuti M, Agengo G, Kabami J, Aoko C, Atuhaire HN, Sang N, Owaranganise A, Litunya J, Mugoma E, Chamie G, Peng J, \textbf{Schrom J}, Bacon M, Kamya M, Havlir D, Petersen M, Balzer L. A community‐based dynamic choice model for HIV prevention improves PrEP and PEP coverage in rural Uganda and Kenya: a cluster randomized trial. Journal of the International AIDS Society. 2023 Dec;26(12):e26195.
+    \item Puryear SB, Mwangwa F, Opel F, Chamie G, Balzer LB, Kabami J, Ayieko J, Owaraganise A, Kakande E, Agengo G, Bukusi E, Kabageni S, Omoding D, Bacon M, \textbf{Schrom J}, Woolf-King S, Petersen M, Havlir D, Kamya M, Hahn J. Effect of a brief alcohol counselling intervention on HIV viral suppression and alcohol use among persons with HIV and unhealthy alcohol use in Uganda and Kenya: a randomized controlled trial. Journal of the International AIDS Society. 2023 Dec;26(12):e26187.
+    \item Ruel T, Mwangwa F, Balzer LB, Ayieko J, Nyabuti M, Mugoma WE, Kabami J, Kamugisha B, Black D, Nzarubara B, Opel F, \textbf{Schrom, J}, Agengo G, Nakigudde J, Atuhaire H, Schwab J, Peng J, Camlin C, Shade S, Bukusi E, Kapogiannis B, Charlebois E, Kamya M, Havlir D. A multilevel health system intervention for virological suppression in adolescents and young adults living with HIV in rural Kenya and Uganda (SEARCH-Youth): a cluster randomised trial. The Lancet HIV. 2023 Aug 1;10(8):e518-27.
+    \item \textbf{Schrom J}, Marquez C, Wang CY, Saxena A, Mitchell AM, Ribeiro S, Pilarowski G, Nakamura R, Rojas S, Black D, Contreras Oseguera MG. Field assessment of BinaxNOW antigen tests as COVID-19 treatment entry point at a community testing site in San Francisco during evolving omicron surges. Plos one. 2023 Mar 24;18(3):e0283576.
+    \item Marquez C, Kerkhoff AD, \textbf{Schrom J}, Rojas S, Black D, Mitchell A, Wang CY, Pilarowski G, Ribeiro S, Jones D, Payan J. COVID-19 Symptoms and Duration of Rapid Antigen Test Positivity at a Community Testing and Surveillance Site During Pre-Delta, Delta, and Omicron BA.1 Periods. JAMA Netw Open. 2022;5(10):e2235844.
+    \item Kerkhoff AD, Rojas S, Black D, Ribeiro S, Rojas S, Valencia R, Lemus J, Payan J, \textbf{Schrom J}, Jones D, Manganelli S. Integrating rapid diabetes screening into a latinx focused community-based low-barrier COVID-19 testing program. JAMA Network Open. 2022 May 2;5(5):e2214163-.
+    \item Acharya CB, \textbf{Schrom J}, Mitchell AM, Coil DA, Marquez C, Rojas S, Wang CY, Liu J, Pilarowski G, Solis L, Georgian E. Viral load among vaccinated and unvaccinated, asymptomatic and symptomatic persons infected with the SARS-CoV-2 delta variant. Open Forum Infectious Diseases 2022 May 1 (Vol. 9, No. 5, p. ofac135). US: Oxford University Press.
+    \item \textbf{Schrom J}, Marquez C, Pilarowski G, Wang CY, Mitchell A, Puccinelli R, Black D, Rojas S, Ribeiro S, Tulier-Laiwa V, Martinez J. Comparison of SARS-CoV-2 reverse transcriptase polymerase chain reaction and BinaxNOW rapid antigen tests at a community site during an Omicron surge: a cross-sectional study. Annals of internal medicine. 2022 May;175(5):682-90.
+    \item \textbf{Schrom J}, Caraballo PJ, Castro MR, Simon GJ. Quantifying the Effect of Statin Use in Pre-Diabetic Phenotypes Discovered Through Association Rule Mining. AMIA Annual Symposium Proceedings. 2013;2013:1249-1257 
+    \item Simon GJ, \textbf{Schrom J}, Castro MR, Li PW, Caraballo PJ. Survival Association Rule Mining Towards Type 2 Diabetes Risk Assessment. AMIA Annual Symposium Proceedings. 2013;2013:1293-1302. 
+\end{itemize}
+
+\section{Posters and Presentations}
+\begin{itemize}
+    \setlength{\itemsep}{1em}
+    \renewcommand{\labelitemi}{}
+    \setlength{\leftskip}{-1.5em}
+    \item Kamya M, Balzer L, Ayieko J, Kabami J, Kakande E, Chamie G, Sutter N, Sunday H, \textbf{Schrom J}, Bacon M, Koss C, Rinehart A, Petersen M, Havlir D. Randomized Trial of SEARCH Dynamic Choice HIV Prevention Including Injectable Cabotegravir (CAB-LA). Podium presentation at: Conference on Retroviruses and Opportunistic Infections; March 2024; Denver. 
+    \item Puryear S, Mwangwa F, Opel F, Chamie G, Balzer L, Kabami J, Ayieko J, Kakande E, \textbf{Schrom J}, Bacon M, Woolf-King S, Petersen M, Havlir D, Kamya M, and Hahn J. Randomized Trial of Brief Alcohol Intervention for Viral Suppression and Alcohol Use. Poster presented at: Conference on Retroviruses and Opportunistic Infections; March 2023; Seattle. 
+    \item \textbf{Schrom J}, Sahn E, Caplin B, Joshi V. Predicting Discrete Reason for Visit using Personalized PageRank. Poster presented at: American Medical Informatics Association Annual Meeting; November 2020; Virtual.
+    \item Sahn E, Caplin B, Soltok D, Lockwood A, Raju P, Chiasson D, Joshi V, \textbf{Schrom J}. Routing to Care: Identifying the Relationship between Discrete Reasons for Visit and Patient-Selected Appointment Types. Poster presented at: American Medical Informatics Association Annual Meeting; November 2020; Virtual.
+    \item \textbf{Schrom J}, Slam A, Liu TK, Bouey C, Berk L, Gilmore A, Lesser L, Behal R. The Impact of Data Communication Style in Email-Based Quality Reports on Depression Screening in Primary Care. Podium presentation at: American Medical Informatics Association Virtual Summit; March 2020; Virtual. 
+    \item \textbf{Schrom J}, Joshi V, Bouey C, Gilmore A. Associating Chief Complaints with Electronic Health Record Activity to Decrease Provider Administrative Burden. Poster presented at: American Medical Informatics Summit; November 2019; Washington DC. 
+    \item Joshi V, \textbf{Schrom J}, Munkittrick K, Stearns C, Ivanova S, Hoang D, Lesser L, Fakhouri T, Diamond A. Design and Implementation of an Electronic Survey for Follow-up of Acute Conditions in Primary Care. Podium presentation at: American Medical Informatics Summit; November 2019; Washington DC. 
+    \item \textbf{Schrom J}, Cohen P, Krisch S, Fakhouri T. Modifying the order of medication search results in an electronic health record to increase physician generic prescribing behavior. Poster presented at: American Medical Informatics Summit; March 2019; San Francisco. 
+    \item Ingram P, Srinivasan R, Grennan P, \textbf{Schrom J}. Identifying Non-Clinical Patient Messages Using Naive Bayes. Poster presented at: American Medical Informatics Association Meeting; November 2018; San Francisco.
+    \item \textbf{Schrom J}, Patterson K, Gillmore A, Cohen P, Lesser L. Group Visits Improve Symptoms and Lower Utilization in Primary Care Patients with Anxiety. Poster presented at: Academy Health Annual Research Meeting; June 2018; Seattle. 
+    \item Lesser L, \textbf{Schrom J}, Gillmore A, Swartz M, Cohen P. Implementation of an Online Rehabilitation Program for Musculoskeletal Problems in Primary Care. Poster presented at: Academy Health Annual Research Meeting; June 2018; Seattle. 
+    \item \textbf{Schrom J}, Schimotzu S, Poplau S, Larsen K. Improving patient center medical home coordination in a safety net healthcare system among adults living with HIV. Oral presentation at: American Public Health Association Annual Meeting; November 2013; Boston. 
+    \item \textbf{Schrom J}, Schimotzu S, Poplau S, Larsen K. Predicting Care Coordination Utilization in Minnesota Health Care Homes. Poster presented at: Health Equity Summit; April 2012; Minneapolis.
+\end{itemize}
+
+\section{Awards and Honors}
+\begin{itemize}
+    \renewcommand{\labelitemi}{}
+    \setlength{\leftskip}{-1.5em}
+    \item Fellow of the American Medical Informatics Association (FAMIA) \rside{2020}
+    \item One Medical Hackathon: “People’s Choice” \rside{2019}
+    \item One Medical Hackathon: “Most Geektastic” \rside{2018}
+    \item Rock Health Fellow \rside{2012}
+    \item Foursquare Global Hack-a-thon: Twilio Prize \rside{2011}
+    \item Health 2.0 “Analyze This!” Challenge: Grand Prize \rside{2011}
+    \item Allina Health Policy Institute Fellow \rside{2009}
+\end{itemize}
+
+\section{Skills}
+%===============
+\begin{itemize}
+    \renewcommand{\labelitemi}{}
+    \setlength{\leftskip}{-1.5em}
+    \item \textbf{python} pandas, sklearn, numpy, matplotlib, seaborn, plotly, nltk, spacy, statsmodels, keras, pytorch, dash, django, flask
+    \item \textbf{R} ggplot, tidyverse, shiny, caret, arules, e1071, mass
+    \item \textbf{Statistical Analysis} hypothesis testing, regression, study design, sampling techniques, bootstrapping, monte carlo simulations
+    \item \textbf{Machine Learning} penalized regression (ridge, lasso, elasticnet), decision trees and random forests, nearest neighbors, support vector machines, neural networks and deep learning, association rules, clustering (kmeans, density-based, hierarchical), principal component analysis, naive bayes, bayesnet
+    \item \textbf{Databases} SQL, no sql, mysql, postgres, sqlite, mongodb, couchdb, snowflake, bigquery, spark
+    \item \textbf{Dev Ops} docker, kubernates, CI/CD, AWS
+\end{itemize}
+
+\section{Leadership and Service}
+\begin{itemize}
+    \renewcommand{\labelitemi}{}
+    \setlength{\leftskip}{-1.5em}
+    \item Marine Mammal Center, Sausalito \rside{2016 -- present}
+    \item \textbf{Chair}, Public Health Advisory Committe, Minneapolis \rside{2009 -- 2013}
+    \item \textbf{Council Member}, Minnesota HIV Service Planning Council, Minneapolis \rside{2009 -- 2011}
+    \item National Runaway Safeline, Chicago \rside{2006 -- 2008}
+\end{itemize}
+
+\end{document}
